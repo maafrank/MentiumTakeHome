@@ -3,7 +3,7 @@ from .nn import InputSignatureWrap,ModifiedPose
 
 def load_trainer():
     trainer = PoseTrainer(cfg = 'ultrahelper/cfg/default.yaml')
-    trainer._setup_train(0)
+    trainer._setup_train()
     return trainer
 
 def load_model():
