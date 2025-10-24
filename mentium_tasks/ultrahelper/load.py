@@ -17,10 +17,10 @@ def load_deployment_model():
     model = trainer.model
     pose_head : ModifiedPose= model.model[-1]
     model.model[-1] = pose_head.get_head()
-    raise model
+    return model
 
 def load_postprocessor():
     trainer = load_trainer()
     model = trainer.model
     pose_head : ModifiedPose= model.model[-1]
-    raise pose_head.get_postprocessor()
+    return pose_head.get_postprocessor()
